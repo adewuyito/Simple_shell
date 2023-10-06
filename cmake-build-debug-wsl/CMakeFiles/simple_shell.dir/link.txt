@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsimple_shell.a CMakeFiles/simple_shell.dir/main.c.o CMakeFiles/simple_shell.dir/initsh.c.o CMakeFiles/simple_shell.dir/builtin_functions.c.o
+/usr/bin/ranlib libsimple_shell.a

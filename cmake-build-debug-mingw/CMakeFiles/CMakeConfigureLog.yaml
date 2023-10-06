@@ -1,0 +1,251 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/Timothy/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake:204 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Windows - 10.0.22621 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/Timothy/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/Timothy/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/Timothy/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/MinGW/bin/gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        //wsl$/Ubuntu/home/adewuyito/dev/simple_shell/cmake-build-debug-mingw/CMakeFiles/3.26.4/CompilerIdC/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Timothy/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Users/Timothy/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "//wsl$/Ubuntu/home/adewuyito/dev/simple_shell/cmake-build-debug-mingw/CMakeFiles/CMakeScratch/TryCompile-wu0wwx"
+      binary: "//wsl$/Ubuntu/home/adewuyito/dev/simple_shell/cmake-build-debug-mingw/CMakeFiles/CMakeScratch/TryCompile-wu0wwx"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: //wsl$/Ubuntu/home/adewuyito/dev/simple_shell/cmake-build-debug-mingw/CMakeFiles/CMakeScratch/TryCompile-wu0wwx
+        
+        Run Build Command(s):C:/Users/Timothy/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_861b5 && [1/2] C:\\MinGW\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_861b5.dir/CMakeCCompilerABI.c.obj -c C:/Users/Timothy/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=C:\\MinGW\\bin\\gcc.exe
+        Target: mingw32
+        Configured with: ../src/gcc-6.3.0/configure --build=x86_64-pc-linux-gnu --host=mingw32 --target=mingw32 --with-gmp=/mingw --with-mpfr --with-mpc=/mingw --with-isl=/mingw --prefix=/mingw --disable-win32-registry --with-arch=i586 --with-tune=generic --enable-languages=c,c++,objc,obj-c++,fortran,ada --with-pkgversion='MinGW.org GCC-6.3.0-1' --enable-static --enable-shared --enable-threads --with-dwarf2 --disable-sjlj-exceptions --enable-version-specific-runtime-libs --with-libiconv-prefix=/mingw --with-libintl-prefix=/mingw --enable-libstdcxx-debug --enable-libgomp --disable-libvtv --enable-nls
+        Thread model: win32
+        gcc version 6.3.0 (MinGW.org GCC-6.3.0-1) 
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_861b5.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=i586'
+         c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/cc1.exe -quiet -v -iprefix c:\\mingw\\bin\\../lib/gcc/mingw32/6.3.0/ C:/Users/Timothy/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=i586 -auxbase-strip CMakeFiles/cmTC_861b5.dir/CMakeCCompilerABI.c.obj -version -fdiagnostics-color=always -o C:\\Users\\Timothy\\AppData\\Local\\Temp\\ccBga1w1.s
+        GNU C11 (MinGW.org GCC-6.3.0-1) version 6.3.0 (mingw32)
+        	compiled by GNU C version 6.3.0, GMP version 6.1.2, MPFR version 3.1.5, MPC version 1.0.3, isl version 0.15
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/include"
+        ignoring nonexistent directory "/mingw/include"
+        ignoring duplicate directory "c:/mingw/lib/gcc/../../include"
+        ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/include-fixed"
+        ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"
+        ignoring nonexistent directory "/mingw/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         c:\\mingw\\bin\\../lib/gcc/mingw32/6.3.0/include
+         c:\\mingw\\bin\\../lib/gcc/mingw32/6.3.0/../../../../include
+         c:\\mingw\\bin\\../lib/gcc/mingw32/6.3.0/include-fixed
+         c:\\mingw\\bin\\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include
+        End of search list.
+        GNU C11 (MinGW.org GCC-6.3.0-1) version 6.3.0 (mingw32)
+        	compiled by GNU C version 6.3.0, GMP version 6.1.2, MPFR version 3.1.5, MPC version 1.0.3, isl version 0.15
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 384cad586f05ed581a9c068b2f18b408
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_861b5.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=i586'
+         c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/as.exe -v -o CMakeFiles/cmTC_861b5.dir/CMakeCCompilerABI.c.obj C:\\Users\\Timothy\\AppData\\Local\\Temp\\ccBga1w1.s
+        GNU assembler version 2.28 (mingw32) using BFD version (GNU Binutils) 2.28
+        COMPILER_PATH=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/;c:/mingw/bin/../libexec/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/
+        LIBRARY_PATH=c:/mingw/bin/../lib/gcc/mingw32/6.3.0/;c:/mingw/bin/../lib/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../;/usr/lib/
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_861b5.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=i586'
+        [2/2] cmd.exe /C "cd . && C:\\MinGW\\bin\\gcc.exe  -v CMakeFiles/cmTC_861b5.dir/CMakeCCompilerABI.c.obj -o cmTC_861b5.exe -Wl,--out-implib,libcmTC_861b5.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        FAILED: cmTC_861b5.exe 
+        cmd.exe /C "cd . && C:\\MinGW\\bin\\gcc.exe  -v CMakeFiles/cmTC_861b5.dir/CMakeCCompilerABI.c.obj -o cmTC_861b5.exe -Wl,--out-implib,libcmTC_861b5.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        '\\\\wsl$\\Ubuntu\\home\\adewuyito\\dev\\simple_shell\\cmake-build-debug-mingw\\CMakeFiles\\CMakeScratch\\TryCompile-wu0wwx'
+        CMD.EXE was started with the above path as the current directory.
+        UNC paths are not supported.  Defaulting to Windows directory.
+        gcc.exe: error: CMakeFiles/cmTC_861b5.dir/CMakeCCompilerABI.c.obj: No such file or directory
+        Using built-in specs.
+        COLLECT_GCC=C:\\MinGW\\bin\\gcc.exe
+        COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe
+        Target: mingw32
+        Configured with: ../src/gcc-6.3.0/configure --build=x86_64-pc-linux-gnu --host=mingw32 --target=mingw32 --with-gmp=/mingw --with-mpfr --with-mpc=/mingw --with-isl=/mingw --prefix=/mingw --disable-win32-registry --with-arch=i586 --with-tune=generic --enable-languages=c,c++,objc,obj-c++,fortran,ada --with-pkgversion='MinGW.org GCC-6.3.0-1' --enable-static --enable-shared --enable-threads --with-dwarf2 --disable-sjlj-exceptions --enable-version-specific-runtime-libs --with-libiconv-prefix=/mingw --with-libintl-prefix=/mingw --enable-libstdcxx-debug --enable-libgomp --disable-libvtv --enable-nls
+        Thread model: win32
+        gcc version 6.3.0 (MinGW.org GCC-6.3.0-1) 
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Timothy/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Check for working C compiler: C:/MinGW/bin/gcc.exe"
+    directories:
+      source: "//wsl$/Ubuntu/home/adewuyito/dev/simple_shell/cmake-build-debug-mingw/CMakeFiles/CMakeScratch/TryCompile-r4ysxh"
+      binary: "//wsl$/Ubuntu/home/adewuyito/dev/simple_shell/cmake-build-debug-mingw/CMakeFiles/CMakeScratch/TryCompile-r4ysxh"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: //wsl$/Ubuntu/home/adewuyito/dev/simple_shell/cmake-build-debug-mingw/CMakeFiles/CMakeScratch/TryCompile-r4ysxh
+        
+        Run Build Command(s):C:/Users/Timothy/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_0f8a1 && ninja: error: '//wsl$/Ubuntu/home/adewuyito/dev/simple_shell/cmake-build-debug-mingw/CMakeFiles/CMakeScratch/TryCompile-r4ysxh/testCCompiler.c', needed by 'CMakeFiles/cmTC_0f8a1.dir/testCCompiler.c.obj', missing and no known rule to make it
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/Timothy/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/Timothy/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/Timothy/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/MinGW/bin/gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        //wsl$/Ubuntu/home/adewuyito/dev/simple_shell/cmake-build-debug-mingw/CMakeFiles/3.26.4/CompilerIdC/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Timothy/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Users/Timothy/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "//wsl$/Ubuntu/home/adewuyito/dev/simple_shell/cmake-build-debug-mingw/CMakeFiles/CMakeScratch/TryCompile-v5ltxs"
+      binary: "//wsl$/Ubuntu/home/adewuyito/dev/simple_shell/cmake-build-debug-mingw/CMakeFiles/CMakeScratch/TryCompile-v5ltxs"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: //wsl$/Ubuntu/home/adewuyito/dev/simple_shell/cmake-build-debug-mingw/CMakeFiles/CMakeScratch/TryCompile-v5ltxs
+        
+        Run Build Command(s):C:/Users/Timothy/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_74f09 && [1/2] C:\\MinGW\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_74f09.dir/CMakeCCompilerABI.c.obj -c C:/Users/Timothy/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=C:\\MinGW\\bin\\gcc.exe
+        Target: mingw32
+        Configured with: ../src/gcc-6.3.0/configure --build=x86_64-pc-linux-gnu --host=mingw32 --target=mingw32 --with-gmp=/mingw --with-mpfr --with-mpc=/mingw --with-isl=/mingw --prefix=/mingw --disable-win32-registry --with-arch=i586 --with-tune=generic --enable-languages=c,c++,objc,obj-c++,fortran,ada --with-pkgversion='MinGW.org GCC-6.3.0-1' --enable-static --enable-shared --enable-threads --with-dwarf2 --disable-sjlj-exceptions --enable-version-specific-runtime-libs --with-libiconv-prefix=/mingw --with-libintl-prefix=/mingw --enable-libstdcxx-debug --enable-libgomp --disable-libvtv --enable-nls
+        Thread model: win32
+        gcc version 6.3.0 (MinGW.org GCC-6.3.0-1) 
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_74f09.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=i586'
+         c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/cc1.exe -quiet -v -iprefix c:\\mingw\\bin\\../lib/gcc/mingw32/6.3.0/ C:/Users/Timothy/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=i586 -auxbase-strip CMakeFiles/cmTC_74f09.dir/CMakeCCompilerABI.c.obj -version -fdiagnostics-color=always -o C:\\Users\\Timothy\\AppData\\Local\\Temp\\ccgv5mik.s
+        GNU C11 (MinGW.org GCC-6.3.0-1) version 6.3.0 (mingw32)
+        	compiled by GNU C version 6.3.0, GMP version 6.1.2, MPFR version 3.1.5, MPC version 1.0.3, isl version 0.15
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/include"
+        ignoring nonexistent directory "/mingw/include"
+        ignoring duplicate directory "c:/mingw/lib/gcc/../../include"
+        ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/include-fixed"
+        ignoring duplicate directory "c:/mingw/lib/gcc/../../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"
+        ignoring nonexistent directory "/mingw/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         c:\\mingw\\bin\\../lib/gcc/mingw32/6.3.0/include
+         c:\\mingw\\bin\\../lib/gcc/mingw32/6.3.0/../../../../include
+         c:\\mingw\\bin\\../lib/gcc/mingw32/6.3.0/include-fixed
+         c:\\mingw\\bin\\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include
+        End of search list.
+        GNU C11 (MinGW.org GCC-6.3.0-1) version 6.3.0 (mingw32)
+        	compiled by GNU C version 6.3.0, GMP version 6.1.2, MPFR version 3.1.5, MPC version 1.0.3, isl version 0.15
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 384cad586f05ed581a9c068b2f18b408
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_74f09.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=i586'
+         c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/as.exe -v -o CMakeFiles/cmTC_74f09.dir/CMakeCCompilerABI.c.obj C:\\Users\\Timothy\\AppData\\Local\\Temp\\ccgv5mik.s
+        GNU assembler version 2.28 (mingw32) using BFD version (GNU Binutils) 2.28
+        COMPILER_PATH=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/;c:/mingw/bin/../libexec/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/
+        LIBRARY_PATH=c:/mingw/bin/../lib/gcc/mingw32/6.3.0/;c:/mingw/bin/../lib/gcc/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/lib/;c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../;/usr/lib/
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_74f09.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=i586'
+        [2/2] cmd.exe /C "cd . && C:\\MinGW\\bin\\gcc.exe  -v CMakeFiles/cmTC_74f09.dir/CMakeCCompilerABI.c.obj -o cmTC_74f09.exe -Wl,--out-implib,libcmTC_74f09.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        FAILED: cmTC_74f09.exe 
+        cmd.exe /C "cd . && C:\\MinGW\\bin\\gcc.exe  -v CMakeFiles/cmTC_74f09.dir/CMakeCCompilerABI.c.obj -o cmTC_74f09.exe -Wl,--out-implib,libcmTC_74f09.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        '\\\\wsl$\\Ubuntu\\home\\adewuyito\\dev\\simple_shell\\cmake-build-debug-mingw\\CMakeFiles\\CMakeScratch\\TryCompile-v5ltxs'
+        CMD.EXE was started with the above path as the current directory.
+        UNC paths are not supported.  Defaulting to Windows directory.
+        gcc.exe: error: CMakeFiles/cmTC_74f09.dir/CMakeCCompilerABI.c.obj: No such file or directory
+        Using built-in specs.
+        COLLECT_GCC=C:\\MinGW\\bin\\gcc.exe
+        COLLECT_LTO_WRAPPER=c:/mingw/bin/../libexec/gcc/mingw32/6.3.0/lto-wrapper.exe
+        Target: mingw32
+        Configured with: ../src/gcc-6.3.0/configure --build=x86_64-pc-linux-gnu --host=mingw32 --target=mingw32 --with-gmp=/mingw --with-mpfr --with-mpc=/mingw --with-isl=/mingw --prefix=/mingw --disable-win32-registry --with-arch=i586 --with-tune=generic --enable-languages=c,c++,objc,obj-c++,fortran,ada --with-pkgversion='MinGW.org GCC-6.3.0-1' --enable-static --enable-shared --enable-threads --with-dwarf2 --disable-sjlj-exceptions --enable-version-specific-runtime-libs --with-libiconv-prefix=/mingw --with-libintl-prefix=/mingw --enable-libstdcxx-debug --enable-libgomp --disable-libvtv --enable-nls
+        Thread model: win32
+        gcc version 6.3.0 (MinGW.org GCC-6.3.0-1) 
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Users/Timothy/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Check for working C compiler: C:/MinGW/bin/gcc.exe"
+    directories:
+      source: "//wsl$/Ubuntu/home/adewuyito/dev/simple_shell/cmake-build-debug-mingw/CMakeFiles/CMakeScratch/TryCompile-ix31za"
+      binary: "//wsl$/Ubuntu/home/adewuyito/dev/simple_shell/cmake-build-debug-mingw/CMakeFiles/CMakeScratch/TryCompile-ix31za"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: //wsl$/Ubuntu/home/adewuyito/dev/simple_shell/cmake-build-debug-mingw/CMakeFiles/CMakeScratch/TryCompile-ix31za
+        
+        Run Build Command(s):C:/Users/Timothy/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_7a2ac && ninja: error: '//wsl$/Ubuntu/home/adewuyito/dev/simple_shell/cmake-build-debug-mingw/CMakeFiles/CMakeScratch/TryCompile-ix31za/testCCompiler.c', needed by 'CMakeFiles/cmTC_7a2ac.dir/testCCompiler.c.obj', missing and no known rule to make it
+        
+      exitCode: 1
+...
