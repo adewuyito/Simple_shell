@@ -35,24 +35,24 @@ char *join_path(char *path, const char *command)
  */
 int get_path(UCommand *cmd)
 {
-	char *path = getenv("PATH");
+	char *path = get_symtab_path();
 	char *full_path = NULL, *token = NULL, *path_cpy = NULL;
 
 	if (path == NULL)
 	{
-		perror("Error: ");
+		perror("Error: Could not get path");
 		return (1);
 	}
 	path_cpy = _strdup(path);
 	if (path_cpy == NULL)
 		return (1);
-
 	token = strtok(path_cpy, ":");
 	while (token != NULL)
 	{
 		full_path = join_path(token, cmd->av[0]);
 		if (full_path == NULL)
 		{
+			free(path);
 			free(path_cpy);
 			return (1);
 		}
@@ -68,10 +68,11 @@ int get_path(UCommand *cmd)
 	}
 	if (access(cmd->av[0], F_OK) == 0)
 	{
-		cmd->path = strdup(cmd->av[0]); /* Update prompt */
+		cmd->path = _strdup(cmd->av[0]); /* Update prompt */
 		cmd->is_path = 1;
 	}
 
+	free(path);
 	free(path_cpy);
 	return (0);
 }

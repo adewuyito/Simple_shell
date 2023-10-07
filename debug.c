@@ -13,8 +13,13 @@ void dump_local_symtab(void)
 
     struct symtab_entry_s *entry = symtab->first;
 
-    while(entry)
+    while (entry)
     {
+        if (entry->name == "PATH" || entry->name == "LS_COLORS")
+        {
+            entry = entry->next;
+            continue;
+        }
         fprintf(stderr, "%*s[%04d] %-32s '%s'\r\n", indent, " ",
                 i++, entry->name, entry->val);
         entry = entry->next;

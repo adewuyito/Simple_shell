@@ -98,6 +98,7 @@ ST_entry *add_to_symtab(char *symbol);
 ST_entry *do_lookup(char *str, ST_strc *symtable);
 ST_entry *get_symtab_entry(char *str);
 ST_S_strc *get_symtab_stack(void);
+char *get_symtab_path(void);
 int rem_from_symtab(ST_entry *entry, ST_strc *symtab);
 void init_symtab(void);
 void dump_local_symtab(void);
