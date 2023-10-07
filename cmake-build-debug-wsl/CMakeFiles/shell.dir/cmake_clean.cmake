@@ -21,8 +21,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/shell.dir/node.c.o.d"
   "CMakeFiles/shell.dir/prompt.c.o"
   "CMakeFiles/shell.dir/prompt.c.o.d"
-  "CMakeFiles/shell.dir/shell.c.o"
-  "CMakeFiles/shell.dir/shell.c.o.d"
   "CMakeFiles/shell.dir/shell_functions.c.o"
   "CMakeFiles/shell.dir/shell_functions.c.o.d"
   "CMakeFiles/shell.dir/strtok.c.o"
@@ -39,8 +37,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/shell.dir/util_functions_2.c.o.d"
   "CMakeFiles/shell.dir/util_funtions.c.o"
   "CMakeFiles/shell.dir/util_funtions.c.o.d"
-  "libshell.a"
-  "libshell.pdb"
+  "shell"
+  "shell.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

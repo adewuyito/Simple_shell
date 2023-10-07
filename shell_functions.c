@@ -86,7 +86,7 @@ int splitString(UCommand *cmd, char *delimiters)
 	}
 
 	token = strtok(inputCopy, delimiters);
-	while (token != NULL && (strcmp(token, "#") != 0))
+	while (token != NULL && (strcmp(token, "#") != 0))	/* Handles comment */
 	{
 		wordCount++;
 		cmd->av = reallocArray(cmd->av, wordCount - 1, wordCount);

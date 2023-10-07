@@ -19,7 +19,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/adewuyito/dev/simple_shell/main.c" "CMakeFiles/shell.dir/main.c.o" "gcc" "CMakeFiles/shell.dir/main.c.o.d"
   "/home/adewuyito/dev/simple_shell/node.c" "CMakeFiles/shell.dir/node.c.o" "gcc" "CMakeFiles/shell.dir/node.c.o.d"
   "/home/adewuyito/dev/simple_shell/prompt.c" "CMakeFiles/shell.dir/prompt.c.o" "gcc" "CMakeFiles/shell.dir/prompt.c.o.d"
-  "/home/adewuyito/dev/simple_shell/shell.c" "CMakeFiles/shell.dir/shell.c.o" "gcc" "CMakeFiles/shell.dir/shell.c.o.d"
   "/home/adewuyito/dev/simple_shell/shell_functions.c" "CMakeFiles/shell.dir/shell_functions.c.o" "gcc" "CMakeFiles/shell.dir/shell_functions.c.o.d"
   "/home/adewuyito/dev/simple_shell/strtok.c" "CMakeFiles/shell.dir/strtok.c.o" "gcc" "CMakeFiles/shell.dir/strtok.c.o.d"
   "/home/adewuyito/dev/simple_shell/symtab.c" "CMakeFiles/shell.dir/symtab.c.o" "gcc" "CMakeFiles/shell.dir/symtab.c.o.d"

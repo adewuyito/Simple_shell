@@ -83,4 +83,5 @@ CMakeFiles/shell.dir/symtab_stack_2.c.o: \
  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
  /usr/include/x86_64-linux-gnu/sys/stat.h \
  /usr/include/x86_64-linux-gnu/bits/stat.h \
- /usr/include/x86_64-linux-gnu/bits/struct_stat.h /usr/include/ctype.h
+ /usr/include/x86_64-linux-gnu/bits/struct_stat.h /usr/include/ctype.h \
+ /home/adewuyito/dev/simple_shell/structs.h

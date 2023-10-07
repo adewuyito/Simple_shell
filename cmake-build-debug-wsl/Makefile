@@ -393,30 +393,6 @@ prompt.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/shell.dir/build.make CMakeFiles/shell.dir/prompt.c.s
 .PHONY : prompt.c.s
 
-shell.o: shell.c.o
-.PHONY : shell.o
-
-# target to build an object file
-shell.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/shell.dir/build.make CMakeFiles/shell.dir/shell.c.o
-.PHONY : shell.c.o
-
-shell.i: shell.c.i
-.PHONY : shell.i
-
-# target to preprocess a source file
-shell.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/shell.dir/build.make CMakeFiles/shell.dir/shell.c.i
-.PHONY : shell.c.i
-
-shell.s: shell.c.s
-.PHONY : shell.s
-
-# target to generate assembly for a file
-shell.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/shell.dir/build.make CMakeFiles/shell.dir/shell.c.s
-.PHONY : shell.c.s
-
 shell_functions.o: shell_functions.c.o
 .PHONY : shell_functions.o
 
@@ -651,9 +627,6 @@ help:
 	@echo "... prompt.o"
 	@echo "... prompt.i"
 	@echo "... prompt.s"
-	@echo "... shell.o"
-	@echo "... shell.i"
-	@echo "... shell.s"
 	@echo "... shell_functions.o"
 	@echo "... shell_functions.i"
 	@echo "... shell_functions.s"

@@ -83,4 +83,5 @@ CMakeFiles/shell.dir/debug.c.o: /home/adewuyito/dev/simple_shell/debug.c \
  /usr/include/x86_64-linux-gnu/bits/stat.h \
  /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
  /home/adewuyito/dev/simple_shell/symtab.h \
- /home/adewuyito/dev/simple_shell/node.h /usr/include/ctype.h
+ /home/adewuyito/dev/simple_shell/node.h /usr/include/ctype.h \
+ /home/adewuyito/dev/simple_shell/structs.h

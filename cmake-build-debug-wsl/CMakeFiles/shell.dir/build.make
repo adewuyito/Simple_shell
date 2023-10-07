@@ -223,24 +223,10 @@ CMakeFiles/shell.dir/prompt.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/shell.dir/prompt.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/adewuyito/dev/simple_shell/prompt.c -o CMakeFiles/shell.dir/prompt.c.s
 
-CMakeFiles/shell.dir/shell.c.o: CMakeFiles/shell.dir/flags.make
-CMakeFiles/shell.dir/shell.c.o: /home/adewuyito/dev/simple_shell/shell.c
-CMakeFiles/shell.dir/shell.c.o: CMakeFiles/shell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adewuyito/dev/simple_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/shell.dir/shell.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/shell.dir/shell.c.o -MF CMakeFiles/shell.dir/shell.c.o.d -o CMakeFiles/shell.dir/shell.c.o -c /home/adewuyito/dev/simple_shell/shell.c
-
-CMakeFiles/shell.dir/shell.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/shell.dir/shell.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/adewuyito/dev/simple_shell/shell.c > CMakeFiles/shell.dir/shell.c.i
-
-CMakeFiles/shell.dir/shell.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/shell.dir/shell.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/adewuyito/dev/simple_shell/shell.c -o CMakeFiles/shell.dir/shell.c.s
-
 CMakeFiles/shell.dir/shell_functions.c.o: CMakeFiles/shell.dir/flags.make
 CMakeFiles/shell.dir/shell_functions.c.o: /home/adewuyito/dev/simple_shell/shell_functions.c
 CMakeFiles/shell.dir/shell_functions.c.o: CMakeFiles/shell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adewuyito/dev/simple_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/shell.dir/shell_functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adewuyito/dev/simple_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/shell.dir/shell_functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/shell.dir/shell_functions.c.o -MF CMakeFiles/shell.dir/shell_functions.c.o.d -o CMakeFiles/shell.dir/shell_functions.c.o -c /home/adewuyito/dev/simple_shell/shell_functions.c
 
 CMakeFiles/shell.dir/shell_functions.c.i: cmake_force
@@ -254,7 +240,7 @@ CMakeFiles/shell.dir/shell_functions.c.s: cmake_force
 CMakeFiles/shell.dir/strtok.c.o: CMakeFiles/shell.dir/flags.make
 CMakeFiles/shell.dir/strtok.c.o: /home/adewuyito/dev/simple_shell/strtok.c
 CMakeFiles/shell.dir/strtok.c.o: CMakeFiles/shell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adewuyito/dev/simple_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/shell.dir/strtok.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adewuyito/dev/simple_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/shell.dir/strtok.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/shell.dir/strtok.c.o -MF CMakeFiles/shell.dir/strtok.c.o.d -o CMakeFiles/shell.dir/strtok.c.o -c /home/adewuyito/dev/simple_shell/strtok.c
 
 CMakeFiles/shell.dir/strtok.c.i: cmake_force
@@ -268,7 +254,7 @@ CMakeFiles/shell.dir/strtok.c.s: cmake_force
 CMakeFiles/shell.dir/symtab.c.o: CMakeFiles/shell.dir/flags.make
 CMakeFiles/shell.dir/symtab.c.o: /home/adewuyito/dev/simple_shell/symtab.c
 CMakeFiles/shell.dir/symtab.c.o: CMakeFiles/shell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adewuyito/dev/simple_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/shell.dir/symtab.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adewuyito/dev/simple_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/shell.dir/symtab.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/shell.dir/symtab.c.o -MF CMakeFiles/shell.dir/symtab.c.o.d -o CMakeFiles/shell.dir/symtab.c.o -c /home/adewuyito/dev/simple_shell/symtab.c
 
 CMakeFiles/shell.dir/symtab.c.i: cmake_force
@@ -282,7 +268,7 @@ CMakeFiles/shell.dir/symtab.c.s: cmake_force
 CMakeFiles/shell.dir/symtab_2.c.o: CMakeFiles/shell.dir/flags.make
 CMakeFiles/shell.dir/symtab_2.c.o: /home/adewuyito/dev/simple_shell/symtab_2.c
 CMakeFiles/shell.dir/symtab_2.c.o: CMakeFiles/shell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adewuyito/dev/simple_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/shell.dir/symtab_2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adewuyito/dev/simple_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/shell.dir/symtab_2.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/shell.dir/symtab_2.c.o -MF CMakeFiles/shell.dir/symtab_2.c.o.d -o CMakeFiles/shell.dir/symtab_2.c.o -c /home/adewuyito/dev/simple_shell/symtab_2.c
 
 CMakeFiles/shell.dir/symtab_2.c.i: cmake_force
@@ -296,7 +282,7 @@ CMakeFiles/shell.dir/symtab_2.c.s: cmake_force
 CMakeFiles/shell.dir/symtab_stack.c.o: CMakeFiles/shell.dir/flags.make
 CMakeFiles/shell.dir/symtab_stack.c.o: /home/adewuyito/dev/simple_shell/symtab_stack.c
 CMakeFiles/shell.dir/symtab_stack.c.o: CMakeFiles/shell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adewuyito/dev/simple_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/shell.dir/symtab_stack.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adewuyito/dev/simple_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/shell.dir/symtab_stack.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/shell.dir/symtab_stack.c.o -MF CMakeFiles/shell.dir/symtab_stack.c.o.d -o CMakeFiles/shell.dir/symtab_stack.c.o -c /home/adewuyito/dev/simple_shell/symtab_stack.c
 
 CMakeFiles/shell.dir/symtab_stack.c.i: cmake_force
@@ -310,7 +296,7 @@ CMakeFiles/shell.dir/symtab_stack.c.s: cmake_force
 CMakeFiles/shell.dir/symtab_stack_2.c.o: CMakeFiles/shell.dir/flags.make
 CMakeFiles/shell.dir/symtab_stack_2.c.o: /home/adewuyito/dev/simple_shell/symtab_stack_2.c
 CMakeFiles/shell.dir/symtab_stack_2.c.o: CMakeFiles/shell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adewuyito/dev/simple_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/shell.dir/symtab_stack_2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adewuyito/dev/simple_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/shell.dir/symtab_stack_2.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/shell.dir/symtab_stack_2.c.o -MF CMakeFiles/shell.dir/symtab_stack_2.c.o.d -o CMakeFiles/shell.dir/symtab_stack_2.c.o -c /home/adewuyito/dev/simple_shell/symtab_stack_2.c
 
 CMakeFiles/shell.dir/symtab_stack_2.c.i: cmake_force
@@ -324,7 +310,7 @@ CMakeFiles/shell.dir/symtab_stack_2.c.s: cmake_force
 CMakeFiles/shell.dir/util_functions_2.c.o: CMakeFiles/shell.dir/flags.make
 CMakeFiles/shell.dir/util_functions_2.c.o: /home/adewuyito/dev/simple_shell/util_functions_2.c
 CMakeFiles/shell.dir/util_functions_2.c.o: CMakeFiles/shell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adewuyito/dev/simple_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/shell.dir/util_functions_2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adewuyito/dev/simple_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/shell.dir/util_functions_2.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/shell.dir/util_functions_2.c.o -MF CMakeFiles/shell.dir/util_functions_2.c.o.d -o CMakeFiles/shell.dir/util_functions_2.c.o -c /home/adewuyito/dev/simple_shell/util_functions_2.c
 
 CMakeFiles/shell.dir/util_functions_2.c.i: cmake_force
@@ -338,7 +324,7 @@ CMakeFiles/shell.dir/util_functions_2.c.s: cmake_force
 CMakeFiles/shell.dir/util_funtions.c.o: CMakeFiles/shell.dir/flags.make
 CMakeFiles/shell.dir/util_funtions.c.o: /home/adewuyito/dev/simple_shell/util_funtions.c
 CMakeFiles/shell.dir/util_funtions.c.o: CMakeFiles/shell.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adewuyito/dev/simple_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/shell.dir/util_funtions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/adewuyito/dev/simple_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/shell.dir/util_funtions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/shell.dir/util_funtions.c.o -MF CMakeFiles/shell.dir/util_funtions.c.o.d -o CMakeFiles/shell.dir/util_funtions.c.o -c /home/adewuyito/dev/simple_shell/util_funtions.c
 
 CMakeFiles/shell.dir/util_funtions.c.i: cmake_force
@@ -362,7 +348,6 @@ shell_OBJECTS = \
 "CMakeFiles/shell.dir/main.c.o" \
 "CMakeFiles/shell.dir/node.c.o" \
 "CMakeFiles/shell.dir/prompt.c.o" \
-"CMakeFiles/shell.dir/shell.c.o" \
 "CMakeFiles/shell.dir/shell_functions.c.o" \
 "CMakeFiles/shell.dir/strtok.c.o" \
 "CMakeFiles/shell.dir/symtab.c.o" \
@@ -375,34 +360,32 @@ shell_OBJECTS = \
 # External object files for target shell
 shell_EXTERNAL_OBJECTS =
 
-libshell.a: CMakeFiles/shell.dir/builtin.c.o
-libshell.a: CMakeFiles/shell.dir/builtin_functions.c.o
-libshell.a: CMakeFiles/shell.dir/clear_screen.c.o
-libshell.a: CMakeFiles/shell.dir/cmd_utils.c.o
-libshell.a: CMakeFiles/shell.dir/debug.c.o
-libshell.a: CMakeFiles/shell.dir/environ.c.o
-libshell.a: CMakeFiles/shell.dir/execute_cmd.c.o
-libshell.a: CMakeFiles/shell.dir/initsh.c.o
-libshell.a: CMakeFiles/shell.dir/main.c.o
-libshell.a: CMakeFiles/shell.dir/node.c.o
-libshell.a: CMakeFiles/shell.dir/prompt.c.o
-libshell.a: CMakeFiles/shell.dir/shell.c.o
-libshell.a: CMakeFiles/shell.dir/shell_functions.c.o
-libshell.a: CMakeFiles/shell.dir/strtok.c.o
-libshell.a: CMakeFiles/shell.dir/symtab.c.o
-libshell.a: CMakeFiles/shell.dir/symtab_2.c.o
-libshell.a: CMakeFiles/shell.dir/symtab_stack.c.o
-libshell.a: CMakeFiles/shell.dir/symtab_stack_2.c.o
-libshell.a: CMakeFiles/shell.dir/util_functions_2.c.o
-libshell.a: CMakeFiles/shell.dir/util_funtions.c.o
-libshell.a: CMakeFiles/shell.dir/build.make
-libshell.a: CMakeFiles/shell.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/adewuyito/dev/simple_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking C static library libshell.a"
-	$(CMAKE_COMMAND) -P CMakeFiles/shell.dir/cmake_clean_target.cmake
+shell: CMakeFiles/shell.dir/builtin.c.o
+shell: CMakeFiles/shell.dir/builtin_functions.c.o
+shell: CMakeFiles/shell.dir/clear_screen.c.o
+shell: CMakeFiles/shell.dir/cmd_utils.c.o
+shell: CMakeFiles/shell.dir/debug.c.o
+shell: CMakeFiles/shell.dir/environ.c.o
+shell: CMakeFiles/shell.dir/execute_cmd.c.o
+shell: CMakeFiles/shell.dir/initsh.c.o
+shell: CMakeFiles/shell.dir/main.c.o
+shell: CMakeFiles/shell.dir/node.c.o
+shell: CMakeFiles/shell.dir/prompt.c.o
+shell: CMakeFiles/shell.dir/shell_functions.c.o
+shell: CMakeFiles/shell.dir/strtok.c.o
+shell: CMakeFiles/shell.dir/symtab.c.o
+shell: CMakeFiles/shell.dir/symtab_2.c.o
+shell: CMakeFiles/shell.dir/symtab_stack.c.o
+shell: CMakeFiles/shell.dir/symtab_stack_2.c.o
+shell: CMakeFiles/shell.dir/util_functions_2.c.o
+shell: CMakeFiles/shell.dir/util_funtions.c.o
+shell: CMakeFiles/shell.dir/build.make
+shell: CMakeFiles/shell.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/adewuyito/dev/simple_shell/cmake-build-debug-wsl/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking C executable shell"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/shell.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/shell.dir/build: libshell.a
+CMakeFiles/shell.dir/build: shell
 .PHONY : CMakeFiles/shell.dir/build
 
 CMakeFiles/shell.dir/clean:
