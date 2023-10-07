@@ -45,6 +45,8 @@ int exit_shell(UCommand *cmd);
 int _env(UCommand *cmd);
 int clear_screen(UCommand *cmd);
 int _cd(UCommand *cmd);
+int set_env(UCommand *cmd);
+int unset_env(UCommand *cmd);
 
 
 #define COMMAND_INFO_INIT                  \

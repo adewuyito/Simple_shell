@@ -34,8 +34,8 @@ int run_builtin(UCommand *cmd)
 		{"exit", exit_shell},
 		{"env", _env},
 		{"clear", clear_screen},
-		{"setenv", NULL},
-		{"unsetenv", NULL},
+		{"setenv", set_env},
+		{"unsetenv", unset_env},
 		{NULL, NULL},
 	};
 
