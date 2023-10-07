@@ -7,7 +7,7 @@
  * Return: 0 on success, -1 on failure
  *
  */
-int _env(UCommand *cmd __attribute__((unused)))
+int _env(UCommand * cmd __attribute__((unused)))
 {
 	char **env = NULL;
 
