@@ -28,14 +28,8 @@ int main(void)
 			continue;
 		}
 		builtin = run_builtin(&ucomd);
-		if (ucomd.exit_state != 1 && builtin == -1)
-		{
-			get_path(&ucomd);
-			if (ucomd.path != NULL)
-				_execve(&ucomd, wait_status); /* Execute the command */
-			else
-				perror("./shell");
-		}
+		if (builtin == -1)
+			_execve(&ucomd, wait_status); /* Execute the command */
 		else if (builtin == 1)
 			print("\n", STDERR_FILENO); /* Error checker */
 		free_cmd(&ucomd);
