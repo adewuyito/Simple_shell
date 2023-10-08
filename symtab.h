@@ -55,24 +55,6 @@ typedef struct symtab_str /* the symbol table structure */
 /* values for the flags field of struct symtab_entry_s */
 #define FLAG_EXPORT (1 << 0) /* export entry to forked commands */
 
-/*
- * Define the ST_strc structure
- * */
-struct ST_strc
-{
-	int level;
-	struct ST_entry *first;
-};
-
-/*
- * Define the ST_entry structure
- * */
-struct ST_entry
-{
-	char name[50];
-	char val[50];
-	struct ST_entry *next;
-};
 
 /**
  * struct symtab_stack_s - symbol table stack structure

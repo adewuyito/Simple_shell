@@ -7,22 +7,44 @@
  * Return: 0 on success, -1 on failure
  *
  */
-int _env(UCommand * cmd __attribute__((unused)))
+int _env(UCommand *cmd)
 {
-	char **env = NULL;
+	char *variable = NULL, *env_var = NULL, *env_val = NULL;
+	char *delim = "=", *token = NULL;
+	ST_strc *symtab = symtab_stack.local_symtab;
+	ST_entry *entry = symtab->first;
 
-	for (env = environ; *env; ++env)
-	{
-		if (env == NULL)
+
+	if (cmd->ac == 1)
+		while (entry)
 		{
-			perror("./shell");
-			return (1);
-		}
-		else
-		{
-			print(*env, STDOUT_FILENO);
+			print(entry->name, STDOUT_FILENO);
+			print("=", STDOUT_FILENO);
+			print(entry->val, STDOUT_FILENO);
 			print("\n", STDOUT_FILENO);
+			entry = entry->next;
 		}
+	else
+	{
+		variable = strdup(cmd->av[1]);
+		if (variable == NULL)
+		{
+			perror("could not get environment variable");
+			free(variable);
+			return (-1);
+		}
+		token = strtok(variable, delim);
+		env_var = strdup(token);
+		token = strtok(NULL, delim);
+		env_val = strdup(token);
+		entry = get_symtab_entry(env_var);
+		if (entry == NULL)
+			entry = add_to_symtab(env_var);
+		symtab_entry_setval(entry, env_val);
+
+		free(variable);
+		free(env_var);
+		free(env_val);
 	}
 
 	return (0);
@@ -80,7 +102,7 @@ int set_env(UCommand *cmd)
 }
 
 /**
- * unsetenv - Removes a variable from path
+ * unset_env - Removes a variable from path
  * @cmd: Command
  *
  * Return: 0 on success, -1 from path
@@ -89,7 +111,6 @@ int unset_env(UCommand *cmd)
 {
 	char *env_var = NULL;
 	ST_entry *entry = NULL;
-	ST_strc *symtab = NULL;
 
 	env_var = strdup(cmd->av[1]);
 	entry = do_lookup(env_var, symtab_stack.global_symtab);

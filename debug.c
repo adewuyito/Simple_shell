@@ -3,19 +3,27 @@
 void dump_local_symtab(void)
 {
 	ST_strc *symtab = symtab_stack.local_symtab;
+	struct symtab_entry_s *entry;
 	int i = 0;
 	int indent = symtab->level * 4;
+	char *name1 = "PATH";
+	char *name2 = "LS_COLORS";
 
-	fprintf(stderr, "%*sSymbol table [Level %d]:\r\n", indent, " ", symtab->level);
-	fprintf(stderr, "%*s===========================\r\n", indent, " ");
-	fprintf(stderr, "%*s  No               Symbol                    Val\r\n", indent, " ");
-	fprintf(stderr, "%*s------ -------------------------------- ------------\r\n", indent, " ");
+	fprintf(stderr,
+			"%*sSymbol table [Level %d]:\r\n",
+			indent, " ",
+			symtab->level);
+	fprintf(stderr, "%*s================\r\n",
+			indent,
+			" ");
+	fprintf(stderr, "%*s  No   Symbol   Val\r\n", indent, " ");
+	fprintf(stderr, "%*s------  ------------\r\n", indent, " ");
 
-	struct symtab_entry_s *entry = symtab->first;
+	entry = symtab->first;
 
 	while (entry)
 	{
-		if (entry->name == "PATH" || entry->name == "LS_COLORS")
+		if (entry->name == name1 || entry->name == name2)
 		{
 			entry = entry->next;
 			continue;
@@ -25,5 +33,5 @@ void dump_local_symtab(void)
 		entry = entry->next;
 	}
 
-	fprintf(stderr, "%*s------ -------------------------------- ------------\r\n", indent, " ");
+	fprintf(stderr, "%*s------ ------------\r\n", indent, " ");
 }
