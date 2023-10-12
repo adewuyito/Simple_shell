@@ -16,15 +16,22 @@
 typedef struct cmd_info
 {
 	char *prompt;
+	char **shell_av;
 	char **av;
 	char *path;
 	char **evn;
 	int ac;
+	int cmd_type;
 	int is_path;
 	int exit_state;
 	int exit_status;
 } UCommand;
 
+#define CMD_NORM	0
+#define CMD_OR		1
+#define CMD_AND		2
+#define CMD_CHAIN	3
+#define CMD_BUILTIN 4
 
 /**
  * struct builtin_s - struct for builtin utilities
@@ -51,7 +58,7 @@ int unset_env(UCommand *cmd);
 
 #define COMMAND_INFO_INIT                  \
 	{                                      \
-		NULL, NULL, NULL, NULL, 0, 1, 0, 0 \
+		NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 0, 0 \
 	}
 
 #endif /* STUCTS_H_ */

@@ -25,9 +25,7 @@ void _execve(UCommand *cmd, int wait_status)
 				perror("Error: command executionn failed");
 			}
 		}
-		else
-		{
-			wait(&wait_status);
-		}
+
+		wait(&wait_status);
 	}
 }

@@ -86,7 +86,7 @@ int splitString(UCommand *cmd, char *delimiters)
 	}
 
 	token = strtok(inputCopy, delimiters);
-	while (token != NULL && (strcmp(token, "#") != 0))	/* Handles comment */
+	while (token != NULL && (strcmp(token, "#") != 0)) /* Handles comment */
 	{
 		wordCount++;
 		cmd->av = reallocArray(cmd->av, wordCount - 1, wordCount);
@@ -118,27 +118,25 @@ int splitString(UCommand *cmd, char *delimiters)
 }
 
 /**
- * would_exit - Check if the user would like to exit the shell
+ * splitString2 - Split a string into an array of words
  * @cmd: The command data
+ * @delimiters: Delimiters to split by
  *
- * Return: Exit status
+ * Return: Array of words
  */
-void would_exit(UCommand *cmd)
+int splitString2(UCommand *cmd, char *delimiters)
 {
+	char *input_cpy = strdup(cmd->prompt);
+	int i = 0;
+	char **copy_string = NULL;
 
-	for (cmd->ac = 0; cmd->av[cmd->ac] != NULL; cmd->ac++)
-		;
-	/* Exit the shell on exit call */
-	if ((strcmp(cmd->av[0], "exit\0") == 0) && (cmd->ac == 1))
-	{
-		cmd->exit_state = 1;
-		cmd->exit_status = 0;
-	}
-	else if ((strcmp(cmd->av[0], "exit\0") == 0) && (cmd->ac > 1))
-	{
-		cmd->exit_state = 1;
-		cmd->exit_status = atoi(cmd->av[1]);
-	}
+	copy_string = _my_strtok(input_cpy, delimiters);
+	cmd->av = remove_comments(copy_string);
+	i = string_array_len(cmd->av);
+	cmd->ac = string_array_len(copy_string);
+
+	free(input_cpy);
+	return (i);
 }
 
 /**
@@ -147,6 +145,8 @@ void would_exit(UCommand *cmd)
  */
 void free_cmd(UCommand *cmd)
 {
+	if (cmd->shell_av != NULL)
+		free_string(cmd->shell_av);
 	if (cmd->av != NULL)
 		free_string(cmd->av);
 	if (cmd->prompt != NULL)

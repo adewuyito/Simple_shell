@@ -89,3 +89,30 @@ int _cd(UCommand *cmd)
 
 	return (ret);
 }
+
+/**
+ * remove_comments - Remove comment
+ * @cmd: string to check
+ *
+ * Return: The changed command
+ */
+char **remove_comments(char **cmd)
+{
+	int i = 0;
+
+	for (i = 0; cmd[i] != NULL; i++)
+	{
+		if (strcmp(cmd[i], "#") == 0)
+		{
+			int j;
+
+			for (j = i; cmd[j] != NULL; j++)
+			{
+				free(cmd[j]);
+				cmd[j] = NULL;
+			}
+		}
+	}
+
+	return (cmd);
+}

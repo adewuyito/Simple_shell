@@ -49,3 +49,27 @@ int run_builtin(UCommand *cmd)
 	}
 	return (ret);
 }
+
+/**
+ * would_exit - Check if the user would like to exit the shell
+ * @cmd: The command data
+ *
+ * Return: Exit status
+ */
+void would_exit(UCommand *cmd)
+{
+
+	for (cmd->ac = 0; cmd->av[cmd->ac] != NULL; cmd->ac++)
+		;
+	/* Exit the shell on exit call */
+	if ((strcmp(cmd->av[0], "exit\0") == 0) && (cmd->ac == 1))
+	{
+		cmd->exit_state = 1;
+		cmd->exit_status = 0;
+	}
+	else if ((strcmp(cmd->av[0], "exit\0") == 0) && (cmd->ac > 1))
+	{
+		cmd->exit_state = 1;
+		cmd->exit_status = atoi(cmd->av[1]);
+	}
+}

@@ -62,3 +62,19 @@ void _memset(void *ptr, int value, size_t size)
 		byte_ptr[i] = (unsigned char)value;
 	}
 }
+
+/**
+ * fill_fd - opens 2 file discriptors
+ * @fd: Address to the file disccriptor
+ */
+void fill_fd(int fd)
+{
+	while ((fd = open("console", O_RDWR)) >= 0)
+	{
+		if (fd >= 3)
+		{
+			close(fd);
+			break;
+		}
+	}
+}
