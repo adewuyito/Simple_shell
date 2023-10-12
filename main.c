@@ -2,15 +2,18 @@
 
 /**
  * main - Entry point
- *
+ * @ac: argument number
+ * @av: list of arguments
  * Return: 0 on success, 1 on failure
  */
-int main(void)
+int main(int ac, char **av)
 {
 	UCommand ucomd = COMMAND_INFO_INIT;
-	int flag = true, wait_status = 0, wordcount = 0, builtin = 1;
+	int flag = true, wait_status = 0, wordcount = 0, builtin = 1, fd = 0;
 
 	initsh();
+	if (ac == 2)
+		fill_fd(fd);
 	while (1 && !ucomd.exit_state && flag)
 	{
 		char *delim = " \n";
