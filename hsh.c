@@ -32,7 +32,7 @@ void hsh(UCommand *ucomd)
 			if (ucomd->path != NULL)
 				_execve(ucomd, wait_status); /* Execute the command */
 			else
-				perror(ucomd->shell_av[0]);
+				perror("./shell: ");
 		}
 		else if (builtin == 1)
 			print("\n", STDOUT_FILENO); /* Error checker */
