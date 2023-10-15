@@ -35,6 +35,7 @@ void fill_fd(int fd);
 void hsh(UCommand *cmd);
 int string_array_len(char **av);
 char **remove_comments(char **cmd);
+int what_node(char **av);
 
 void print_prompt1(void);
 void free_cmd(UCommand *cmd);
