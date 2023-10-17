@@ -1,31 +1,6 @@
 #include "shell.h"
 
 /**
- * what_node - Get the command type
- * @av: Av command
- *
- * Return: The command mode
- */
-/*int what_node(char **av)
-{
-	int i = 0, mode = CMD_NORM;
-
-	for (i = 0; cmd[i] != NULL; i++)
-	{
-		if (strcmp(cmd[i], "||") == 0)
-			made = CMD_OR;
-		else if (strcmp(cmd[i], "&&") == 0)
-			made = CMD_AND;
-		else if (strcmp(cmd[i], ";") == 0)
-			made = CMD_CHAIN;
-		else
-			made = CMD_NORM;
-	}
-
-	return (mode);
-}*/
-
-/**
  * _execve - Execute command
  * @cmd: The command data
  * @wait_status: The wait status

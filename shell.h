@@ -32,10 +32,13 @@ void interactive(int *flag);
 int run_builtin(UCommand *cmd);
 void initsh(void);
 void fill_fd(int fd);
-void hsh(UCommand *cmd);
+void hsh(UCommand *cmd, char **av);
 int string_array_len(char **av);
 char **remove_comments(char **cmd);
 int what_node(char **av);
+char **copy_av(char **av);
+void print_error(UCommand *cmd);
+char *itoa(int value, char *result, int base);
 
 void print_prompt1(void);
 void free_cmd(UCommand *cmd);

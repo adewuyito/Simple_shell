@@ -1,11 +1,11 @@
 #include "shell.h"
 
-
 /**
  * hsh - Shell execution
  * @ucomd: Shell Information
+ * @av: List of arguments
  */
-void hsh(UCommand *ucomd)
+void hsh(UCommand *ucomd, char **av)
 {
 	int flag = true, wait_status = 0, wordcount = 0, builtin = 1;
 
@@ -15,6 +15,8 @@ void hsh(UCommand *ucomd)
 		ssize_t read;
 
 		interactive(&flag);
+		ucomd->run_count = ucomd->run_count + 1;
+		ucomd->shell_av = copy_av(av);
 		(flag == true) ? print_prompt1() : print("", STDOUT_FILENO);
 		read = get_input(ucomd);	 /* Get input from user */
 		if (read == -1 || read == 0) /* Error checker */
@@ -32,10 +34,116 @@ void hsh(UCommand *ucomd)
 			if (ucomd->path != NULL)
 				_execve(ucomd, wait_status); /* Execute the command */
 			else
-				perror("./shell: ");
+			{
+				print_error(ucomd);
+			}
 		}
 		else if (builtin == 1)
 			print("\n", STDOUT_FILENO); /* Error checker */
 		free_cmd(ucomd);
 	}
+}
+
+/**
+ * copy_av - add to strings to av
+ * @av: av
+ *
+ * Return: the new av
+ */
+
+char **copy_av(char **av)
+{
+	int size, i;
+	char **avv;
+
+	if (av == NULL)
+	{
+		return (NULL);
+	}
+
+	size = 0;
+	while (av[size] != NULL)
+	{
+		size++;
+	}
+
+	avv = malloc((size + 1) * sizeof(char *));
+	if (avv == NULL)
+	{
+		perror("Memory allocation failed");
+		exit(EXIT_FAILURE);
+	}
+
+	for (i = 0; i < size; i++)
+	{
+		avv[i] = strdup(av[i]);
+		if (avv[i] == NULL)
+		{
+			perror("Memory allocation failed");
+			exit(EXIT_FAILURE);
+		}
+	}
+
+	avv[size] = NULL; /* NULL terminate the array */
+
+	return (avv);
+}
+
+/**
+ * print_error - print the shells name
+ * @cmd: command
+ *
+ * Return: void
+ */
+void print_error(UCommand *cmd)
+{
+	char buffer[20];
+
+	print(cmd->shell_av[0], STDERR_FILENO);
+	print(": ", STDERR_FILENO);
+	print(itoa(cmd->run_count, buffer, 10), STDERR_FILENO);
+	print(": ", STDERR_FILENO);
+	print(cmd->av[0], STDERR_FILENO);
+	print(":", STDERR_FILENO);
+	perror("");
+}
+
+/**
+ * itoa - convert int to string
+ * @value: int to convert
+ * @result: string to return
+ * @base: base to convert to
+ *
+ * Return: string
+ */
+char *itoa(int value, char *result, int base)
+{
+	char *ptr, *ptr1, tmp_char;
+	int tmp_value;
+
+	if (base < 2 || base > 36)
+	{
+		*result = '\0';
+		return (result);
+	}
+
+	ptr = result;
+	ptr1 = result;
+	do {
+		tmp_value = value;
+		value /= base;
+		*ptr++ = "0123456789"[(tmp_value - value * base)];
+	} while (value);
+
+	if (tmp_value < 0)
+		*ptr++ = '-';
+	*ptr-- = '\0';
+
+	while (ptr1 < ptr)
+	{
+		tmp_char = *ptr;
+		*ptr-- = *ptr1;
+		*ptr1++ = tmp_char;
+	}
+	return (result);
 }

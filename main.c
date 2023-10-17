@@ -18,7 +18,7 @@ int main(int ac, char **av)
 		ucomd.shell_av = av;
 	}
 
-	hsh(&ucomd);
+	hsh(&ucomd, av);
 	free_symtab(symtab_stack.global_symtab);
 	exit(ucomd.exit_status % 256);
 }
