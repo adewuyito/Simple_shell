@@ -58,7 +58,7 @@ int unset_env(UCommand *cmd);
 
 #define COMMAND_INFO_INIT                        \
 	{                                            \
-		NULL, NULL, NULL, NULL, 0, 0, 1, 0, 0, 2 \
+		NULL, NULL, NULL, NULL, 0, 0, 1, 0, 0, 0 \
 	}
 
 #endif /* STUCTS_H_ */

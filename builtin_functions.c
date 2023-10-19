@@ -26,7 +26,6 @@ int exit_shell(UCommand *cmd)
 		cmd->exit_status = _atoi(cmd->av[1]);
 		if (cmd->exit_status == -2)
 		{
-			cmd->exit_status = 2;
 			print("exit: Illegal number: ", STDERR_FILENO);
 			print(cmd->av[1], STDERR_FILENO);
 			print("\n", STDERR_FILENO);
