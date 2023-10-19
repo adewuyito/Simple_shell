@@ -33,7 +33,6 @@ int exit_shell(UCommand *cmd)
 			return (1);
 		}
 		cmd->exit_state = 1;
-		cmd->error_no = _atoi(cmd->av[1]);
 	}
 	else if (cmd->ac == 1)
 	{
