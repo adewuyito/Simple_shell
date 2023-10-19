@@ -41,7 +41,7 @@ int get_path(UCommand *cmd)
 	if (path == NULL)
 	{
 		perror("Error: Could not get path");
-		return (1);
+		return (-1);
 	}
 	path_cpy = _strdup(path);
 	if (path_cpy == NULL)

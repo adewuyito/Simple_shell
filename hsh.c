@@ -104,7 +104,7 @@ void print_error(UCommand *cmd)
 	print(itoa(cmd->run_count, buffer, 10), STDERR_FILENO);
 	print(": ", STDERR_FILENO);
 	print(cmd->av[0], STDERR_FILENO);
-	print(":", STDERR_FILENO);
+	print(": ", STDERR_FILENO);
 	perror("");
 }
 

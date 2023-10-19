@@ -39,11 +39,15 @@ void initsh(void)
 		p2++;
 	}
 
+	/*
 	entry = add_to_symtab("PS1");
 	symtab_entry_setval(entry, "$ ");
+	*/
 
+	/*
 	entry = add_to_symtab("PS2");
 	symtab_entry_setval(entry, "> ");
+	*/
 }
 
 /**
