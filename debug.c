@@ -1,5 +1,10 @@
 #include "shell.h"
 
+/**
+ * dump_local_symtab - Dump the local symbol table
+ *
+ * Return: void
+ */
 void dump_local_symtab(void)
 {
 	ST_strc *symtab = symtab_stack.local_symtab;

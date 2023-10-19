@@ -26,12 +26,14 @@ int exit_shell(UCommand *cmd)
 		cmd->exit_status = _atoi(cmd->av[1]);
 		if (cmd->exit_status == -2)
 		{
-			print("exit: Illegal number", STDERR_FILENO);
-			print(": ", STDERR_FILENO);
+			cmd->exit_status = 2;
+			print("exit: Illegal number: ", STDERR_FILENO);
 			print(cmd->av[1], STDERR_FILENO);
+			print("\n", STDERR_FILENO);
 			return (1);
 		}
 		cmd->exit_state = 1;
+		cmd->error_no = _atoi(cmd->av[1]);
 	}
 	else if (cmd->ac == 1)
 	{
