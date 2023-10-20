@@ -80,9 +80,9 @@ int string_array_len(char **av)
 }
 
 /**
- * is_only_spaced - checkes for spacs
+ * is_only_spaces - checkes for spacs
  * @string: the string to check
- * 
+ *
  * Return: 1 if true & 0 if not true
  */
 int is_only_spaces(char *string)

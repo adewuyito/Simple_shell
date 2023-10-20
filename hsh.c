@@ -112,8 +112,9 @@ void print_error(UCommand *cmd)
 }
 
 /**
- * print_cd_error - print the shells name
+ * print_custom_error - print the shells name
  * @cmd: command
+ * @string: added string
  *
  * Return: void
  */

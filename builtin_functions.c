@@ -7,7 +7,7 @@
  *
  * Return: 0
  */
-int dump(UCommand *cmd __attribute__((unused)))
+int dump(UCommand * cmd __attribute__((unused)))
 {
 	dump_local_symtab();
 	return (0);
@@ -67,12 +67,10 @@ int _cd(UCommand *cmd)
 	if (entry == NULL)
 		return (1);
 	pwd = entry->val;
-
 	entry = get_symtab_entry("HOME");
 	if (entry == NULL)
 		return (1);
 	home = entry->val;
-
 	if (!cmd->av[1])
 		ret = chdir(home);
 	else if (_strcmp(cmd->av[1], "-") == 0)
@@ -80,8 +78,7 @@ int _cd(UCommand *cmd)
 		entry = get_symtab_entry("OLDPWD");
 		if (!entry)
 		{
-			print(cmd->av[2], STDOUT_FILENO);
-			print("\n", STDOUT_FILENO);
+			print(cmd->av[2], STDOUT_FILENO), print("\n", STDOUT_FILENO);
 			return (1);
 		}
 		oldpwd = entry->val;
@@ -90,11 +87,9 @@ int _cd(UCommand *cmd)
 	}
 	else
 		ret = chdir(cmd->av[1]);
-
 	if (ret == -1)
 	{
-		print_custom_error(cmd, "can't cd to ");
-		print("\n", STDERR_FILENO);
+		print_custom_error(cmd, "can't cd to "), print("\n", STDERR_FILENO);
 		return (1);
 	}
 	else
