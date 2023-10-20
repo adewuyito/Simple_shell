@@ -30,7 +30,8 @@ ssize_t get_input(UCommand *cmd)
 			exit(EXIT_FAILURE);
 		}
 	}
-
+	
+	prompt[strcspn(prompt, "\n")] = '\0';
 	cmd->prompt = strdup(prompt);
 	free(prompt);
 

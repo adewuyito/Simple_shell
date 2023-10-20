@@ -9,12 +9,12 @@ void hsh(UCommand *ucomd, char **av)
 {
 	int flag = true, wordcount = 0, builtin = 1;
 
-	while (1 && !ucomd->exit_state && flag)
+	flag = interactive(ucomd);
+	while (1 && !ucomd->exit_state)
 	{
 		char *delim = " \n";
 		ssize_t read;
 
-		flag = interactive(ucomd);
 		ucomd->run_count = ucomd->run_count + 1;
 		ucomd->shell_av = copy_av(av);
 		(flag == true) ? print_prompt1() : print("", STDOUT_FILENO);
@@ -39,6 +39,8 @@ void hsh(UCommand *ucomd, char **av)
 			}
 		}
 		free_cmd(ucomd);
+		if (!flag && feof(stdin))
+			break;
 	}
 	if (!interactive(ucomd) && ucomd->status)
 		exit(ucomd->status);
@@ -106,6 +108,26 @@ void print_error(UCommand *cmd)
 	print(cmd->av[0], STDERR_FILENO);
 	print(": ", STDERR_FILENO);
 	perror("");
+}
+
+/**
+ * print_cd_error - print the shells name
+ * @cmd: command
+ *
+ * Return: void
+ */
+void print_custom_error(UCommand *cmd, char *string)
+{
+	char buffer[20];
+
+	print(cmd->shell_av[0], STDERR_FILENO);
+	print(": ", STDERR_FILENO);
+	print(itoa(cmd->run_count, buffer, 10), STDERR_FILENO);
+	print(": ", STDERR_FILENO);
+	print(cmd->av[0], STDERR_FILENO);
+	print(": ", STDERR_FILENO);
+	print(string, STDERR_FILENO);
+	print(cmd->av[1], STDERR_FILENO);
 }
 
 /**

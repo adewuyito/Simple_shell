@@ -7,7 +7,7 @@
  *
  * Return: 0
  */
-int dump(UCommand * cmd __attribute__((unused)))
+int dump(UCommand *cmd __attribute__((unused)))
 {
 	dump_local_symtab();
 	return (0);
@@ -68,11 +68,6 @@ int _cd(UCommand *cmd)
 		return (1);
 	pwd = entry->val;
 
-	entry = get_symtab_entry("OLDPWD");
-	if (entry == NULL)
-		return (1);
-	oldpwd = entry->val;
-
 	entry = get_symtab_entry("HOME");
 	if (entry == NULL)
 		return (1);
@@ -81,13 +76,25 @@ int _cd(UCommand *cmd)
 	if (!cmd->av[1])
 		ret = chdir(home);
 	else if (_strcmp(cmd->av[1], "-") == 0)
+	{
+		entry = get_symtab_entry("OLDPWD");
+		if (!entry)
+		{
+			print(cmd->av[2], STDOUT_FILENO);
+			print("\n", STDOUT_FILENO);
+			return (1);
+		}
+		oldpwd = entry->val;
+		print(oldpwd, STDOUT_FILENO), print("\n", STDOUT_FILENO);
 		ret = chdir(oldpwd);
+	}
 	else
 		ret = chdir(cmd->av[1]);
 
 	if (ret == -1)
 	{
-		perror("can't change directory");
+		print_custom_error(cmd, "can't cd to ");
+		print("\n", STDERR_FILENO);
 		return (1);
 	}
 	else
@@ -138,8 +145,8 @@ int _erratoi(char *s)
 	unsigned long int result = 0;
 
 	if (*s == '+')
-		s++;  /* TODO: why does this make main return 255? */
-	for (i = 0;  s[i] != '\0'; i++)
+		s++; /* TODO: why does this make main return 255? */
+	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] >= '0' && s[i] <= '9')
 		{

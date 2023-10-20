@@ -119,13 +119,13 @@ int unset_env(UCommand *cmd)
 	ST_entry *entry = NULL;
 	int i;
 
-	if (cmd->ac != 2)
+	if (cmd->ac < 2)
 	{
 		print("Incorrect number of arguements\n", STDERR_FILENO);
 		return (1);
 	}
 
-	for (i = 0; i < cmd->ac; i++)
+	for (i = 1; i != cmd->ac; i++)
 	{
 		env_var = strdup(cmd->av[i]);
 		entry = do_lookup(env_var, symtab_stack.global_symtab);
