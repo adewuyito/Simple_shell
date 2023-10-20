@@ -21,16 +21,25 @@ int dump(UCommand * cmd __attribute__((unused)))
  */
 int exit_shell(UCommand *cmd)
 {
+	int check;
+
 	if (cmd->ac > 1)
 	{
-		cmd->exit_status = _atoi(cmd->av[1]);
-		if (cmd->exit_status == -2)
+		check = _erratoi(cmd->av[1]);
+		if (check == -1)
 		{
-			print("exit: Illegal number: ", STDERR_FILENO);
+			char buffer[20];
+
+			cmd->status = 2;
+			print(cmd->shell_av[0], STDERR_FILENO);
+			print(": ", STDERR_FILENO);
+			print(itoa(cmd->run_count, buffer, 10), STDERR_FILENO);
+			print(": exit: Illegal number: ", STDERR_FILENO);
 			print(cmd->av[1], STDERR_FILENO);
 			print("\n", STDERR_FILENO);
 			return (1);
 		}
+		cmd->exit_status = _erratoi(cmd->av[1]);
 		cmd->exit_state = 1;
 	}
 	else if (cmd->ac == 1)
@@ -115,4 +124,32 @@ char **remove_comments(char **cmd)
 	}
 
 	return (cmd);
+}
+
+/**
+ * _erratoi - converts a string to an integer
+ * @s: the string to be converted
+ * Return: 0 if no numbers in string, converted number otherwise
+ *       -1 on error
+ */
+int _erratoi(char *s)
+{
+	int i = 0;
+	unsigned long int result = 0;
+
+	if (*s == '+')
+		s++;  /* TODO: why does this make main return 255? */
+	for (i = 0;  s[i] != '\0'; i++)
+	{
+		if (s[i] >= '0' && s[i] <= '9')
+		{
+			result *= 10;
+			result += (s[i] - '0');
+			if (result > __INT_MAX__)
+				return (-1);
+		}
+		else
+			return (-1);
+	}
+	return (result);
 }

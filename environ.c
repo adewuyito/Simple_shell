@@ -11,9 +11,8 @@ int _env(UCommand *cmd)
 {
 	char *variable = NULL, *env_var = NULL, *env_val = NULL;
 	char *delim = "=", *token = NULL;
-	ST_strc *symtab = symtab_stack.local_symtab;
+	ST_strc *symtab = symtab_stack.global_symtab;
 	ST_entry *entry = symtab->first;
-
 
 	if (cmd->ac == 1)
 		while (entry)
@@ -52,13 +51,12 @@ int _env(UCommand *cmd)
 
 /**
  * interactive - Check if the shell is interactive
- * @flag: The flag to set
  *
+ * Return: 1 if interactive, 0 if not
  */
-void interactive(int *flag)
+int interactive(void)
 {
-	if (isatty(STDIN_FILENO) == 0)
-		*flag = !flag;
+	return (isatty(STDIN_FILENO));
 }
 
 /**
@@ -73,30 +71,37 @@ int set_env(UCommand *cmd)
 	char *env_val = NULL;
 	ST_entry *entry = NULL;
 
-	env_var = strdup(cmd->av[1]);
-	env_val = strdup(cmd->av[2]);
-	if (env_var == NULL)
+	if (cmd->ac == 3)
 	{
-		perror("could not get environment variable");
-		free(env_val);
+		env_var = strdup(cmd->av[1]);
+		env_val = strdup(cmd->av[2]);
+		if (env_var == NULL)
+		{
+			perror("could not get environment variable");
+			free(env_val);
+			free(env_var);
+			return (-1);
+		}
+		if (env_val == NULL)
+		{
+			perror("could not set environment variable");
+			free(env_var);
+			free(env_val);
+			return (-1);
+		}
+		entry = get_symtab_entry(env_var);
+		if (entry == NULL)
+			entry = add_to_symtab(env_var);
+
+		symtab_entry_setval(entry, env_val);
 		free(env_var);
-		return (-1);
-	}
-	if (env_val == NULL)
-	{
-		perror("could not set environment variable");
-		free(env_var);
 		free(env_val);
-		return (-1);
 	}
-	entry = get_symtab_entry(env_var);
-	if (entry == NULL)
+	else
 	{
-		entry = add_to_symtab(env_var);
+		print("Incorrect number of arguements\n", STDERR_FILENO);
+		return (1);
 	}
-	symtab_entry_setval(entry, env_val);
-	free(env_var);
-	free(env_val);
 
 	return (0);
 }
@@ -111,24 +116,34 @@ int unset_env(UCommand *cmd)
 {
 	char *env_var = NULL;
 	ST_entry *entry = NULL;
+	int i;
 
-	env_var = strdup(cmd->av[1]);
-	entry = do_lookup(env_var, symtab_stack.global_symtab);
-	if (env_var == NULL)
+	if (cmd->ac != 2)
 	{
-		perror("could not get environment variable");
-		free(env_var);
-		return (-1);
+		print("Incorrect number of arguements\n", STDERR_FILENO);
+		return (1);
 	}
-	if (entry == NULL)
-	{
-		perror("could remove environment variable");
-		free(env_var);
-		return (-1);
-	}
-	rem_from_symtab(entry, symtab_stack.global_symtab);
 
-	free(env_var);
+	for (i = 0; i < cmd->ac; i++)
+	{
+		env_var = strdup(cmd->av[i]);
+		entry = do_lookup(env_var, symtab_stack.global_symtab);
+		if (env_var == NULL)
+		{
+			perror("could not get environment variable");
+			free(env_var);
+			return (-1);
+		}
+		if (entry == NULL)
+		{
+			perror("could remove environment variable");
+			free(env_var);
+			return (-1);
+		}
+		rem_from_symtab(entry, symtab_stack.global_symtab);
+
+		free(env_var);
+	}
 	return (0);
 }
 

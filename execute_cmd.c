@@ -3,11 +3,10 @@
 /**
  * _execve - Execute command
  * @cmd: The command data
- * @wait_status: The wait status
  *
  * Return: 0 on success, -1 on failure
  */
-void _execve(UCommand *cmd, int wait_status)
+void _execve(UCommand *cmd)
 {
 	char **av = cmd->av;
 	char *full_path = NULL;
@@ -26,6 +25,12 @@ void _execve(UCommand *cmd, int wait_status)
 			}
 		}
 
-		wait(&wait_status);
+		wait(&(cmd->status));
+		if (WIFEXITED(cmd->status))
+		{
+			cmd->status = WEXITSTATUS(cmd->status);
+			if (cmd->status == 126)
+				print("Permission denied\n", STDERR_FILENO);
+		}
 	}
 }

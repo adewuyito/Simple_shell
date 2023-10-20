@@ -7,14 +7,14 @@
  */
 void hsh(UCommand *ucomd, char **av)
 {
-	int flag = true, wait_status = 0, wordcount = 0, builtin = 1;
+	int flag = true, wordcount = 0, builtin = 1;
 
 	while (1 && !ucomd->exit_state && flag)
 	{
 		char *delim = " \n";
 		ssize_t read;
 
-		interactive(&flag);
+		flag = interactive();
 		ucomd->run_count = ucomd->run_count + 1;
 		ucomd->shell_av = copy_av(av);
 		(flag == true) ? print_prompt1() : print("", STDOUT_FILENO);
@@ -32,16 +32,16 @@ void hsh(UCommand *ucomd, char **av)
 		{
 			get_path(ucomd);
 			if (ucomd->path != NULL)
-				_execve(ucomd, wait_status); /* Execute the command */
+				_execve(ucomd); /* Execute the command */
 			else
 			{
 				print_error(ucomd);
 			}
 		}
-		else if (builtin == 1)
-			print("\n", STDOUT_FILENO); /* Error checker */
 		free_cmd(ucomd);
 	}
+	if (!interactive(ucomd) && ucomd->status)
+		exit(ucomd->status);
 }
 
 /**

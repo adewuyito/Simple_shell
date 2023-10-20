@@ -18,6 +18,7 @@
 extern char **environ;
 
 /*Function prototypes*/
+int _erratoi(char *s);
 ssize_t get_input(UCommand *cmd);
 int _strcmp(const char *s1, const char *s2);
 char *_strdup(const char *s);
@@ -28,7 +29,7 @@ int splitString(UCommand *cmd, char *delimiters);
 int splitString2(UCommand *cmd, char *delimiters);
 void would_exit(UCommand *cmd);
 int with_builtin(char *prompt);
-void interactive(int *flag);
+int interactive();
 int run_builtin(UCommand *cmd);
 void initsh(void);
 void fill_fd(int fd);
@@ -42,7 +43,7 @@ char *itoa(int value, char *result, int base);
 
 void print_prompt1(void);
 void free_cmd(UCommand *cmd);
-void _execve(UCommand *cmd, int wait_status);
+void _execve(UCommand *cmd);
 char **reallocArray(char **oldArray, size_t oldSize, size_t newSize);
 
 void print(char *string, int stream);
