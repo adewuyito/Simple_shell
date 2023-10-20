@@ -78,3 +78,23 @@ int string_array_len(char **av)
 
 	return (i);
 }
+
+/**
+ * is_only_spaced - checkes for spacs
+ * @string: the string to check
+ * 
+ * Return: 1 if true & 0 if not true
+ */
+int is_only_spaces(char *string)
+{
+	while (*string)
+	{
+		if (!isspace((unsigned char)*string))
+		{
+			return (0);
+		}
+		string++;
+	}
+
+	return (1);
+}

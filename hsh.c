@@ -27,8 +27,9 @@ void hsh(UCommand *ucomd, char **av)
 			free_cmd(ucomd);
 			continue;
 		}
-		builtin = run_builtin(ucomd);
-		if (ucomd->exit_state != 1 && builtin == -1)
+		if (wordcount != -1)
+			builtin = run_builtin(ucomd);
+		if (ucomd->exit_state != 1 && builtin == -1 && wordcount != -1)
 		{
 			get_path(ucomd);
 			if (ucomd->path != NULL)

@@ -30,7 +30,7 @@ ssize_t get_input(UCommand *cmd)
 			exit(EXIT_FAILURE);
 		}
 	}
-	
+
 	prompt[strcspn(prompt, "\n")] = '\0';
 	cmd->prompt = strdup(prompt);
 	free(prompt);
@@ -127,10 +127,15 @@ int splitString(UCommand *cmd, char *delimiters)
  */
 int splitString2(UCommand *cmd, char *delimiters)
 {
-	char *input_cpy = strdup(cmd->prompt);
+	char *input_cpy = NULL;
 	int i = 0;
 	char **copy_string = NULL;
 
+	if (strcmp(cmd->prompt, "") == 0 || is_only_spaces(cmd->prompt))
+	{
+		return (-1);
+	}
+	input_cpy = strdup(cmd->prompt);
 	copy_string = _my_strtok(input_cpy, delimiters);
 	cmd->av = remove_comments(copy_string);
 	i = string_array_len(cmd->av);
