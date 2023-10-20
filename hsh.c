@@ -14,7 +14,7 @@ void hsh(UCommand *ucomd, char **av)
 		char *delim = " \n";
 		ssize_t read;
 
-		flag = interactive();
+		flag = interactive(ucomd);
 		ucomd->run_count = ucomd->run_count + 1;
 		ucomd->shell_av = copy_av(av);
 		(flag == true) ? print_prompt1() : print("", STDOUT_FILENO);

@@ -61,8 +61,10 @@ void _memset(void *ptr, int value, size_t size)
 /**
  * fill_fd - opens 2 file discriptors
  * @fd: Address to the file disccriptor
+ *
+ * Return: fd
  */
-void fill_fd(int fd)
+int fill_fd(int fd)
 {
 	while ((fd = open("console", O_RDWR)) >= 0)
 	{
@@ -72,4 +74,6 @@ void fill_fd(int fd)
 			break;
 		}
 	}
+
+	return (fd);
 }

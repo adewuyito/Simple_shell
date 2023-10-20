@@ -111,7 +111,7 @@ char **remove_comments(char **cmd)
 
 	for (i = 0; cmd[i] != NULL; i++)
 	{
-		if (strcmp(cmd[i], "#") == 0)
+		if ((cmd[i][0] == '#') || (strcmp(cmd[i], "#") == 0))
 		{
 			int j;
 

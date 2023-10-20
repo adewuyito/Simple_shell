@@ -51,12 +51,13 @@ int _env(UCommand *cmd)
 
 /**
  * interactive - Check if the shell is interactive
+ *	@cmd: The command info
  *
  * Return: 1 if interactive, 0 if not
  */
-int interactive(void)
+int interactive(UCommand *cmd)
 {
-	return (isatty(STDIN_FILENO));
+	return ((isatty(STDIN_FILENO) && (cmd->fdd <= 2)));
 }
 
 /**

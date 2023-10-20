@@ -12,9 +12,9 @@ int main(int ac, char **av)
 	int fd = 0;
 
 	initsh();
+	ucomd.fdd = fill_fd(fd);
 	if (ac == 2)
 	{
-		fill_fd(fd);
 		ucomd.shell_av = av;
 	}
 
