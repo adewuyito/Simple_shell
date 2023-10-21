@@ -5,7 +5,7 @@
  * @ucomd: Shell Information
  * @av: List of arguments
  */
-void hsh(UCommand *ucomd, char **av)
+void hsh(UCommand *ucomd, char **av __attribute__((unused)))
 {
 	int flag = true, wordcount = 0, builtin = 1;
 
