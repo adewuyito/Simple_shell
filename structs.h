@@ -17,6 +17,7 @@
  */
 typedef struct cmd_info
 {
+	char *shell_name;
 	char *prompt;
 	char **shell_av;
 	char **av;
@@ -60,7 +61,7 @@ int unset_env(UCommand *cmd);
 
 #define COMMAND_INFO_INIT                              \
 	{                                                  \
-		NULL, NULL, NULL, NULL, 0, 0, 0, 0, 1, 0, 0, 0 \
+		NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 1, 0, 0, 0 \
 	}
 
 #endif /* STUCTS_H_ */

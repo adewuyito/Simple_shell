@@ -31,7 +31,7 @@ int exit_shell(UCommand *cmd)
 			char buffer[20];
 
 			cmd->status = 2;
-			print(cmd->shell_av[0], STDERR_FILENO);
+			print(cmd->shell_name, STDERR_FILENO);
 			print(": ", STDERR_FILENO);
 			print(itoa(cmd->run_count, buffer, 10), STDERR_FILENO);
 			print(": exit: Illegal number: ", STDERR_FILENO);

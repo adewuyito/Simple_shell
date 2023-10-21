@@ -102,7 +102,7 @@ void print_error(UCommand *cmd)
 {
 	char buffer[20];
 
-	print(cmd->shell_av[0], STDERR_FILENO);
+	print(cmd->shell_name, STDERR_FILENO);
 	print(": ", STDERR_FILENO);
 	print(itoa(cmd->run_count, buffer, 10), STDERR_FILENO);
 	print(": ", STDERR_FILENO);
@@ -122,7 +122,7 @@ void print_custom_error(UCommand *cmd, char *string)
 {
 	char buffer[20];
 
-	print(cmd->shell_av[0], STDERR_FILENO);
+	print(cmd->shell_name, STDERR_FILENO);
 	print(": ", STDERR_FILENO);
 	print(itoa(cmd->run_count, buffer, 10), STDERR_FILENO);
 	print(": ", STDERR_FILENO);

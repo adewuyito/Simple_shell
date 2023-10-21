@@ -17,8 +17,10 @@ int main(int ac, char **av)
 	{
 		ucomd.shell_av = av;
 	}
-
+	ucomd.shell_name = strdup(av[0]);
 	hsh(&ucomd, av);
+	if (ucomd.shell_name != NULL)
+		free(ucomd.shell_name);
 	free_symtab(symtab_stack.global_symtab);
 	exit(ucomd.exit_status % 256);
 }
