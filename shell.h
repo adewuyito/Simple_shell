@@ -42,7 +42,7 @@ void print_error(UCommand *cmd);
 char *itoa(int value, char *result, int base);
 void print_custom_error(UCommand *cmd, char *string);
 int is_only_spaces(char *string);
-void trimString(char *str);
+void trim_string(char *str);
 
 void print_prompt1(void);
 void free_cmd(UCommand *cmd);
