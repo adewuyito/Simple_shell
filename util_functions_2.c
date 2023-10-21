@@ -61,3 +61,23 @@ int _atoi(char *s)
 
 	return (result * sign);
 }
+
+/**
+ * trim_string - Removes space from the 
+ * @str: string to trim
+ */
+void trimString(char *str)
+{
+	size_t len;
+
+    while (isspace((unsigned char)*str)) {
+        str++;
+    }
+
+    len = strlen(str);
+    while (len > 0 && isspace((unsigned char)str[len - 1])) {
+        len--;
+    }
+
+    str[len] = '\0';
+}
