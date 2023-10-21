@@ -16,7 +16,7 @@ void hsh(UCommand *ucomd, char **av)
 		ssize_t read;
 
 		ucomd->run_count = ucomd->run_count + 1;
-		ucomd->shell_av = copy_av(av);
+		/* ucomd->shell_av = copy_av(av); */
 		(flag == true) ? print_prompt1() : print("", STDOUT_FILENO);
 		read = get_input(ucomd);	 /* Get input from user */
 		if (read == -1 || read == 0) /* Error checker */
