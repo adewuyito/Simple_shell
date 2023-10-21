@@ -66,7 +66,7 @@ int _atoi(char *s)
  * trim_string - Removes space from the
  * @str: string to trim
  */
-void trimString(char *str)
+void trim_string(char *str)
 {
 	size_t len;
 
